@@ -24,11 +24,18 @@
     #emailContainer {
         display: flex;
         margin: auto;
+        margin-top: 30px;
         flex-direction: column;
         justify-content: center;
         width: 50%;        
+        background-color: var(--secondary-background);
+        color: var(--main-text);
     }
 
+    td {
+
+        color: var(--main-text);
+    }
 
 
     header {
@@ -101,6 +108,12 @@
         text-align: right;
         
     }
+
+    #total {
+        text-align: end;
+        padding-right: 30px;
+    }
+
 </style>
 <body>
     <div id="emailContainer">
@@ -135,6 +148,7 @@
                     <p class="itemPrice">Price: $269.00</p>
                 </td>
             </tr>
+            
             <tr class="orderItem">
                 <td>
                     <img class="itemImg" alt="Bronson G3 Bearings" src="https://cdn.shopify.com/s/files/1/1899/8641/products/25719d37a0f409e0fde510e044a3407d9bd2b945_487x.progressive.jpg?v=1633455099">
@@ -149,8 +163,11 @@
                     <p class="itemPrice">Price: $69.00</p>
                 </td>
             </tr>
+            
         </table>
-
+        <p id="total">
+            Total: $338
+        </p>
         <!-- Customer info -->
 
 
