@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://santacruzskateboards.com/images/logos/santa-cruz-skateboards.png">
+    <title>Thank you for your purchase</title>
+</head> 
+<style>
+
+    :root {
+        --main-text: rgb(97, 97, 97);
+        --secondary-text: white;
+        --main-background: white;
+        --secondary-background: rgb(219, 219, 219);
+    }
+
+    * {
+        font-family: program, sans-serif;
+        font-weight: bold;
+        
+    }
+    
+    #emailContainer {
+        display: flex;
+        margin: auto;
+        margin-top: 30px;
+        flex-direction: column;
+        justify-content: center;
+        
+        background-color: var(--secondary-background);
+        color: var(--main-text);
+    }
+
+    td {
+        color: var(--main-text);
+    }
+
+
+    header {
+        display: flex;
+        align-items: center;
+        font-size: larger;
+        
+        text-align: center;
+        padding: 0px 10px;
+    }
+
+    header, footer {
+        background-color: black;
+        opacity: 0.8;
+        color: var(--secondary-text);
+    }
+
+    header img {
+        margin-left: 10px;
+    }
+
+
+
+
+
+    #order {
+        
+        padding-top: 20px;
+        background-color: var(--secondary-background);
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .orderItem {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;   
+        color: var(--main-text);
+    }
+
+    .itemImg {
+        width: 130px;
+        height: 130px;
+        border-radius: 20px;
+        
+    }
+
+    table {
+        width: 100%;
+        padding: 10px;
+        margin: auto;
+        text-align: left;
+    }
+
+    td {
+        height: 150px;
+    }
+
+    .itemQuantity {
+
+        text-align: left;
+        
+    }
+
+    .itemPrice {
+        text-align: right;
+        
+    }
+
+    #customerInfo {
+        background-color: var(--secondary-background);
+        border-top: 2px solid grey;
+        padding: 20px;
+        line-height: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    footer {
+        text-align: center;
+        font-size: 13px;
+    }
+
+        /* Desktop */
+    @media only screen and (min-width: 950px) {
+        #emailContainer {
+            width: 50%;        
+        }
+
+        #headerText {
+            padding-left: 19%;
+        }
+
+        .itemImg {
+            margin: 10px 15px;
+        }
+
+        .itemTitle {
+            width: 300px;
+        }
+
+        .itemQuantity {
+            margin-left: 100px;
+        }
+
+        #total {
+            text-align: end;
+            padding-right: 40px;
+        }
+    }
+
+    /* Mobile */
+    @media only screen and (max-width: 950px) {
+
+        .itemImg {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+
+        #emailContainer {
+            margin: auto;
+            width: 100%;
+        }
+
+        #customerDetails, #orderDetails {
+            font-size: 10px;
+        }
+
+        .itemQuantity {
+            text-align: center;
+            padding-left: 3px;
+        }
+
+        #total {
+            text-align: center;
+        }
+
+        #customerDetails, #orderDetails {
+            font-size: 13px;
+        }
+
+        #orderDetails {
+            text-align: right;
+        }
+    }
+
+
+
+
+
+</style>
+<body>
+    <div id="emailContainer">
+        <!-- Top section -->
+        <header>
+            <a href="https://santacruzskateboards.com.au/" target="_blank">
+                <img src="https://santacruzskateboards.com/images/logos/santa-cruz-skateboards.png" width="100px" height="100px">
+            </a>
+            <div id="headerText">
+                <h3>
+                    THANK YOU FOR YOUR PURCHASE
+                </h3>
+                <p>
+                    Your order is on it's way
+                </p>
+            </div>
+        </header>
+
+        <!-- Customer order -->
+        <table id="order">
+            <tr class="orderItem">
+                <td>
+                    <img class="itemImg" alt="Classic 80s cruiser" src="https://cdn.shopify.com/s/files/1/0475/5337/products/santa-cruz-classic-dot-80s-cruiser-complete-1_2000x.jpg?v=1602563264">
+                </td>
+                <td class="itemTitle">
+                    <p>Santa Cruz Classic Dot 80's Cruiser</p>  
+                </td>
+                <td>
+                    <p class="itemQuantity">Quantity: <b>1</b></p>
+                </td>
+                <td style="width: 255px">
+                    <p class="itemPrice">Price: $269.00</p>
+                </td>
+            </tr>
+            
+            <tr class="orderItem">
+                <td>
+                    <img class="itemImg" alt="Bronson G3 Bearings" src="https://cdn.shopify.com/s/files/1/1899/8641/products/25719d37a0f409e0fde510e044a3407d9bd2b945_487x.progressive.jpg?v=1633455099">
+                </td>
+                <td class="itemTitle">
+                    <p>Bronson G3 Bearings 8 pack</p>
+                </td>
+                <td>
+                    <p class="itemQuantity">Quantity: <b>1</b></p>
+                </td>
+                <td style="width: 255px">
+                    <p class="itemPrice">Price: $69.00</p>
+                </td>
+            </tr>
+            
+        </table>
+        <p id="total">
+            Total: $338
+        </p>
+
+        <!-- Customer info -->
+        <div id="customerInfo">
+            <div id="customerDetails">
+                Name: John Smith
+                <br />
+                Email: sample@gmail.com
+                <br />
+                Phone: 1234 567 890
+            </div>
+            <div id="orderDetails">
+                Receipt number: #1234567890
+                <br />
+                Order Date: Nov 15 2021
+                <br />
+                Address: 123 Example Avenue, 1234, VIC
+                <br />
+                Tracking number: 1234567890
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; Therealcoolpup</p>
+        </footer>
+
+    </div>
+</body>
+</html>
